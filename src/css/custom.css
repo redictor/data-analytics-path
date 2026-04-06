@@ -33,3 +33,8 @@
 .no-icon svg {
   display: none;
 }
+
+.medium-zoom-overlay,
+.medium-zoom-image--opened {
+  z-index: 9999 !important;
+}

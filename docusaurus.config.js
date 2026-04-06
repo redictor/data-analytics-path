@@ -28,8 +28,6 @@ const config = {
       {
         docs: {
           sidebarPath: './sidebars.js',
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -38,13 +36,17 @@ const config = {
     ],
   ],
 
+  plugins: [require.resolve('docusaurus-plugin-image-zoom')],
+
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
+
     colorMode: {
       defaultMode: 'dark',
       disableSwitch: true,
       respectPrefersColorScheme: false,
     },
+
     navbar: {
       title: 'Путь в Data Analytics',
       logo: {
@@ -66,9 +68,19 @@ const config = {
         },
       ],
     },
+
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+    },
+
+    // 👉 И ВОТ СЮДА
+    zoom: {
+      selector: '.markdown img',
+      background: {
+        light: 'rgb(255, 255, 255)',
+        dark: 'rgb(50, 50, 50)',
+      },
     },
   },
 };
