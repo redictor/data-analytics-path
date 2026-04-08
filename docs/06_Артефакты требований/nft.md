@@ -4,7 +4,7 @@ sidebar_position: 2
 title: Нефункциональные требования
 ---
 
-## НФТ (Нефункциональные требования)
+# НФТ (Нефункциональные требования)
 
 [Functional vs Non Functional Requirements - GeeksforGeeks](https://www.geeksforgeeks.org/software-engineering/functional-vs-non-functional-requirements/)
 
