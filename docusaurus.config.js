@@ -36,7 +36,21 @@ const config = {
     ],
   ],
 
-  plugins: [require.resolve('docusaurus-plugin-image-zoom')],
+  plugins: [
+    require.resolve('docusaurus-plugin-image-zoom'),
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      {
+        hashed: true,
+        indexDocs: true,
+        indexBlog: false,
+        indexPages: false,
+        language: ['ru'],
+        highlightSearchTermsOnTargetPage: true,
+        explicitSearchResultPath: true,
+      },
+    ],
+  ],
 
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
@@ -61,6 +75,10 @@ const config = {
           label: 'База знаний',
         },
         {
+          type: 'search',
+          position: 'right',
+        },
+        {
           label: 'Telegram',
           href: 'https://t.me/prikazanoo',
           position: 'right',
@@ -74,7 +92,6 @@ const config = {
       darkTheme: prismThemes.dracula,
     },
 
-    // 👉 И ВОТ СЮДА
     zoom: {
       selector: '.markdown img',
       background: {
